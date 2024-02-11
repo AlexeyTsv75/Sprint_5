@@ -5,7 +5,7 @@ from selenium import webdriver
 from locators import TestLocators
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
-
+# используемые фикстуры
 
 @pytest.fixture(scope='function')
 def driver():

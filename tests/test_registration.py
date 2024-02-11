@@ -1,3 +1,5 @@
+import time
+
 import data
 import configuration
 from locators import TestLocators
@@ -12,6 +14,7 @@ class TestRegistration:
         driver.find_element(*TestLocators.REG_NAME).send_keys(data.new_correct_user['name'])
         driver.find_element(*TestLocators.REG_E_MAIL).send_keys(data.new_correct_user['e-mail'])
         driver.find_element(*TestLocators.REG_PASSWORD).send_keys(data.new_correct_user['password'])
+        time.sleep(3)
         driver.find_element(*TestLocators.REG_BUTTON).click()
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(TestLocators.LOGIN_BUTTON))
         assert driver.current_url == configuration.MAIN_PAGE + configuration.AUTHOR_PAGE

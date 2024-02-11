@@ -1,5 +1,5 @@
 import random
-
+# данные, используемые в тестах
 new_correct_user = {'name': 'Alex',
                     'e-mail': 'alex_qa5' + str(random.randint(100, 999)) + '@ya.ru',
                     'password': str(random.randint(100000, 999999))}

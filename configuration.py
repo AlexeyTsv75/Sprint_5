@@ -1,3 +1,4 @@
+# ссылки на используемые страницы сайта
 MAIN_PAGE = 'https://stellarburgers.nomoreparties.site/'
 AUTHOR_PAGE = 'login'
 REG_PAGE = 'register'
