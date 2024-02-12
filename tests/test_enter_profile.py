@@ -18,5 +18,4 @@ class TestEnterProfile:
         driver.find_element(*TestLocators.PROFILE_BUTTON).click()
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(TestLocators.SAVE_BUTTON))
         profile = driver.current_url
-        driver.quit()
         assert profile == configuration.MAIN_PAGE+configuration.PROFILE_PAGE

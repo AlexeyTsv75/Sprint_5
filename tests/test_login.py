@@ -16,7 +16,6 @@ class TestLogIn:
         driver.find_element(*TestLocators.LOGIN_BUTTON).click()
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(TestLocators.MAKE_ORDER_BUTTON))
         order = driver.find_element(*TestLocators.MAKE_ORDER_BUTTON).text
-        driver.quit()
         assert order == 'Оформить заказ'
 
     def test_login_through_profile_button(self, driver, reg_correct_user):
@@ -29,7 +28,6 @@ class TestLogIn:
         driver.find_element(*TestLocators.LOGIN_BUTTON).click()
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(TestLocators.MAKE_ORDER_BUTTON))
         order = driver.find_element(*TestLocators.MAKE_ORDER_BUTTON).text
-        driver.quit()
         assert order == 'Оформить заказ'
 
     def test_login_through_registration_form_link(self, driver, reg_correct_user):
@@ -42,7 +40,6 @@ class TestLogIn:
         driver.find_element(*TestLocators.LOGIN_BUTTON).click()
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(TestLocators.MAKE_ORDER_BUTTON))
         order = driver.find_element(*TestLocators.MAKE_ORDER_BUTTON).text
-        driver.quit()
         assert order == 'Оформить заказ'
 
     def test_login_through_forgot_password_link(self, driver, reg_correct_user):
@@ -55,7 +52,6 @@ class TestLogIn:
         driver.find_element(*TestLocators.LOGIN_BUTTON).click()
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(TestLocators.MAKE_ORDER_BUTTON))
         order = driver.find_element(*TestLocators.MAKE_ORDER_BUTTON).text
-        driver.quit()
         assert order == 'Оформить заказ'
 
     def test_login_through_reset_password_link(self, driver, reg_correct_user):
@@ -72,4 +68,3 @@ class TestLogIn:
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(TestLocators.MAKE_ORDER_BUTTON))
         order = driver.find_element(*TestLocators.MAKE_ORDER_BUTTON).text
         assert order == 'Оформить заказ'
-        driver.quit()

@@ -20,4 +20,3 @@ class TestExitProfile:
         driver.find_element(*TestLocators.EXIT_PROFILE_BUTTON).click()
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(TestLocators.LOGIN_BUTTON))
         assert driver.current_url == configuration.MAIN_PAGE+configuration.AUTHOR_PAGE
-        driver.quit()

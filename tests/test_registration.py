@@ -18,7 +18,6 @@ class TestRegistration:
         driver.find_element(*TestLocators.REG_BUTTON).click()
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(TestLocators.LOGIN_BUTTON))
         assert driver.current_url == configuration.MAIN_PAGE + configuration.AUTHOR_PAGE
-        driver.quit()
 
     def test_registration_user_wrong_password_impossible(self, driver):
         driver.get(configuration.MAIN_PAGE + configuration.REG_PAGE)
@@ -29,5 +28,4 @@ class TestRegistration:
         driver.find_element(*TestLocators.REG_BUTTON).click()
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(TestLocators.REG_BUTTON))
         wrong_pass = driver.find_element(*TestLocators.WRONG_PASSWORD).text
-        driver.quit()
         assert wrong_pass == "Некорректный пароль"

@@ -11,7 +11,6 @@ class TestConstructorTabs:
         WebDriverWait(driver, 3)
         elem = driver.find_element(*TestLocators.TAB_SOUS)
         assert elem == driver.find_element(*TestLocators.CHOSEN_TAB)
-        driver.quit()
 
     def test_change_tabs_bulki_to_nachinki_in_constructor_success(self, driver):
         driver.get(configuration.MAIN_PAGE)
@@ -19,7 +18,6 @@ class TestConstructorTabs:
         WebDriverWait(driver, 3)
         elem = driver.find_element(*TestLocators.TAB_NACHINKI)
         assert elem == driver.find_element(*TestLocators.CHOSEN_TAB)
-        driver.quit()
 
     def test_change_tabs_sous_to_bulki_in_constructor_success(self, driver):
         driver.get(configuration.MAIN_PAGE)
@@ -29,7 +27,6 @@ class TestConstructorTabs:
         WebDriverWait(driver, 3)
         elem = driver.find_element(*TestLocators.TAB_BULKI)
         assert elem == driver.find_element(*TestLocators.CHOSEN_TAB)
-        driver.quit()
 
     def test_change_tabs_nachinki_to_bulki_in_constructor_success(self, driver):
         driver.get(configuration.MAIN_PAGE)
@@ -39,7 +36,6 @@ class TestConstructorTabs:
         WebDriverWait(driver, 3)
         elem = driver.find_element(*TestLocators.TAB_BULKI)
         assert elem == driver.find_element(*TestLocators.CHOSEN_TAB)
-        driver.quit()
 
     def test_change_tabs_sous_to_nachinki_in_constructor_success(self, driver):
         driver.get(configuration.MAIN_PAGE)
@@ -49,7 +45,6 @@ class TestConstructorTabs:
         WebDriverWait(driver, 3)
         elem = driver.find_element(*TestLocators.TAB_NACHINKI)
         assert elem == driver.find_element(*TestLocators.CHOSEN_TAB)
-        driver.quit()
 
     def test_change_tabs_nachinki_to_sous_in_constructor_success(self, driver):
         driver.get(configuration.MAIN_PAGE)
@@ -59,4 +54,3 @@ class TestConstructorTabs:
         WebDriverWait(driver, 3)
         elem = driver.find_element(*TestLocators.TAB_SOUS)
         assert elem == driver.find_element(*TestLocators.CHOSEN_TAB)
-        driver.quit()

@@ -20,7 +20,6 @@ class TestMoveFromProfile:
         driver.find_element(*TestLocators.CONSTRUCTOR_BUTTON).click()
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(TestLocators.MAKE_ORDER_BUTTON))
         assert driver.current_url == configuration.MAIN_PAGE
-        driver.quit()
 
     def test_leave_profile_for_constructor_through_logo_success(self, driver, reg_correct_user):
         driver.get(configuration.MAIN_PAGE)
@@ -36,6 +35,3 @@ class TestMoveFromProfile:
         driver.find_element(*TestLocators.LOGO_BUTTON).click()
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located(TestLocators.MAKE_ORDER_BUTTON))
         assert driver.current_url == configuration.MAIN_PAGE
-        driver.quit()
-
-
